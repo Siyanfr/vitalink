@@ -10,3 +10,69 @@ body {
   color: var(--text-dark);
   background: #fff;
 }
+
+/* Base Nav */
+header {
+  margin: 0;         
+  padding: 10px 15px; 
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; 
+  z-index: 1000;
+}
+
+.logo img {
+  height: 40px;  
+  width: auto;
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  color: #2d3436;
+  position: relative;
+}
+
+.menu-toggle {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+  user-select: none;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: var(--primary-hover) !important; 
+}
+
+nav ul li a:hover {
+  color: var(--primary-color) !important; 
+  font-weight: bold;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background: var(--primary-hover);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
