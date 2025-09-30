@@ -391,3 +391,73 @@ nav ul li a:hover::after {
     font-size: 0.9rem;
   }
 }
+
+/* Our Mission Section */
+.our-mission {
+  display: flex;
+  min-height: 500px;
+  width: 100%;
+
+  /* --- The Fix --- */
+  background-image: url("images/home/2.png"), url("images/home/3.png");
+  background-size: 50% 100%, 50% 100%; 
+  background-position: left top, right top; 
+  background-repeat: no-repeat;
+}
+
+.mission-left {
+  flex: 1;
+  background: none;
+}
+
+.mission-right {
+  flex: 1;
+  background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.mission-content {
+  background: rgba(255, 255, 255, 0.85); /* translucent box for readability */
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: left;
+}
+
+.mission-content h2 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.mission-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+@media (max-width: 991px) {
+  .our-mission {
+    flex-direction: column;
+    background-size: 100% 50%, 100% 50%;
+    background-position: top center, bottom center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .mission-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .mission-content p {
+    font-size: 1rem;
+  }
+}
