@@ -234,4 +234,160 @@ nav ul li a:hover::after {
   nav.active {
     display: flex; 
   }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-image: url("images/home/1.png"), url("images/home/5.png");
+    background-position: top center, bottom center;
+    background-size: contain, cover;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  .hero-text {
+    margin: 0;
+    z-index: 2;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .btn-findcare,
+  .btn-joinvitalink {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    min-width: 120px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+    margin-top: 450px;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  .hero-stats {
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center; 
+  }
+
+  .stat-item h2 {
+    font-size: 15px;
+  }
+
+}
+
+/* ----------- Tablet View ----------- */
+@media (min-width: 577px) and (max-width: 991px) {
+  header {
+    padding: 15px 30px;
+  }
+
+  .logo img {
+    height: 28px;
+  }
+
+  /* Navbar links appear inline on tablets */
+  nav {
+    display: flex !important;
+    position: static;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  /* Hero section adjustments */
+  .hero {
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    text-align: left; /* Align text to the left */
+    padding: 60px 40px;
+    background-image: url("images/home/5.png"), url("images/home/1.png");
+
+    /* Set the size for each image */
+    background-size: 50% 100%, 50% 100%;
+
+    /* Position each image */
+    background-position: left center, right center;
+
+    /* Prevent the images from repeating */
+    background-repeat: no-repeat;
+    opacity: 0;
+    animation: fadeInHero 2s ease-out forwards;
+  }
+
+  .hero-text {
+    /* Main fix: Remove excessive top margin */
+    margin: 0;
+    max-width: 50%; 
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+    margin-top: 0;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+    margin: 15px 0 25px;
+  }
+
+  @keyframes fadeInHero {
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Buttons in one row */
+  .hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start; 
+    margin-bottom: 25px;
+  }
+
+  .btn-findcare,
+  .btn-joinvitalink {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    min-width: 150px;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .stat-item h2 {
+    font-size: 20px;
+  }
+
+  .stat-item p {
+    font-size: 0.9rem;
+  }
 }
