@@ -76,3 +76,125 @@ nav ul li a::after {
 nav ul li a:hover::after {
   width: 100%;
 }
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;        
+  flex-wrap: wrap;   
+  margin-top: 15px;
+}
+
+.btn-register, .btn-findcare{
+  background: var(--primary);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-register:hover {
+  background: var(--primary-hover);    
+  color: #fff;                  
+}
+
+.btn-joinvitalink {
+  color: var(--text-dark);
+  padding: 0.6rem 1.2rem;
+  border-radius: 25px;
+  border: 2px solid var(--text-dark);
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-buttons .btn-findcare:hover{
+  background: var(--primary-hover);
+}
+
+.hero-buttons .btn-joinvitalink:hover{
+  background: var(--primary-hover);
+  border-color: transparent;
+  color:#FFFFFF;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 5%;
+  min-height: 90vh;
+
+  /* Two background images */
+  background: url("images/home/5.png") left center no-repeat,
+              url("images/home/1.png") right center no-repeat;
+  /* Control each image size (left , right) */
+  background-size: 50% auto, 50% auto;  
+}
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 span {
+  color: var(--primary);
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero img {
+  max-width: 500px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3436;
+}
+
+.stat-item h2 span {
+  color: #00B894;
+}
+
+.stat-item p {
+  margin-top: 0.3rem;
+  font-size: 0.9rem;
+  color: #636e72;
+}
+
+.hero-img-right img {
+  max-width: 500px;
+  height: auto;
+}
+
