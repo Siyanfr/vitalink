@@ -577,3 +577,104 @@ nav ul li a:hover::after {
     justify-content: center;
   }
 }
+
+/* Explore VitaLink Section */
+.explore-vitalink {
+  padding: 60px 20px;
+  background: url("images/home/4.png") no-repeat center/cover;
+  text-align: center;
+}
+
+.explore-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.explore-card {
+  background: #A8F6E7;
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explore-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.1);
+  background-color: var(--primary-hover);
+}
+
+.explore-card:hover h3,
+.explore-card:hover p {
+  color: #fff;
+}
+
+.explore-card .icon {
+  margin-bottom: 15px;
+}
+
+.explore-card .icon img {
+  width: 50px;
+  height: 50px;
+}
+
+.explore-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.explore-card p {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+
+/* Tablet View (2 columns) */
+@media (min-width: 577px) and (max-width: 991px) {
+  .explore-vitalink {
+    padding: 40px 15px;
+  }
+  
+  .section-title {
+    font-size: 2.5rem; 
+    margin-bottom: 30px;
+  }
+}
+
+/* Mobile View (1 column) */
+@media (max-width: 576px) {
+  .explore-vitalink {
+    padding: 30px 10px;
+  }
+  
+  .section-title {
+    font-size: 2rem; 
+    margin-bottom: 25px;
+  }
+  
+  .explore-grid {
+    grid-template-columns: 1fr; 
+    max-width: 100%; 
+  }
+
+  .explore-card {
+    text-align: center; 
+    padding: 25px 15px; 
+  }
+
+  .explore-card .icon {
+    margin-bottom: 10px;
+  }
+  
+  .explore-card h3 {
+    font-size: 1.1rem;
+  }
+  
+  .explore-card p {
+    font-size: 0.9rem;
+  }
+}
