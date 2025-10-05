@@ -1034,3 +1034,156 @@ nav ul li a:hover::after {
   background: url("images/about/1.png") no-repeat center/cover;
   text-align: center;
 }
+
+/* How It Works Section */
+.how-it-works-section {
+  padding: 80px 20px;
+  background-color: #fff;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+.how-it-works-section .section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 60px;
+}
+
+.how-it-works-section .section-title .highlight {
+  color: #00b894; 
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 30px; 
+  max-width: 1000px; 
+  margin: 0 auto; 
+}
+
+.step-card {
+  background-color: #e0fcf6; 
+  border-radius: 12px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-hover);
+}
+
+.step-card:hover h3,
+.step-card:hover p {
+  color: #fff; /* turns text white */
+  transition: color 0.3s ease-in-out; /* smooth effect */
+}
+
+.step-text {
+  flex: 1; 
+  text-align: left;
+  padding-right: 20px; 
+}
+
+.step-text h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.step-text p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.step-icon {
+  flex-shrink: 0; 
+  width: 70px; 
+  height: 70px; 
+  background-color: #c4f3eb; 
+  border-radius: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-icon img {
+  max-width: 60%;
+  max-height: 60%;
+  height: auto;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .steps-grid {
+    grid-template-columns: 1fr; 
+    max-width: 600px; 
+  }
+
+  .step-card {
+    flex-direction: row; 
+    justify-content: space-between;
+    padding: 25px;
+  }
+
+  .step-text {
+    padding-right: 15px;
+  }
+
+  .step-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .step-text p {
+    font-size: 0.9rem;
+  }
+
+  .step-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .how-it-works-section {
+    padding: 60px 15px;
+  }
+
+  .how-it-works-section .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .step-card {
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .step-text {
+    padding-right: 0;
+    margin-bottom: 15px;
+    order: 2; 
+    text-align: center;
+  }
+
+  .step-text h3 {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .step-icon {
+    order: 1;
+    margin-top: 0; 
+    margin-bottom: 15px; 
+  }
+}
