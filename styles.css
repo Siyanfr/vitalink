@@ -1028,3 +1028,9 @@ nav ul li a:hover::after {
     text-align: center;
   }
 }
+
+.goal-section {
+  padding: 60px 20px;
+  background: url("images/about/1.png") no-repeat center/cover;
+  text-align: center;
+}
