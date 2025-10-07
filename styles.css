@@ -1463,3 +1463,51 @@ nav ul li a:hover::after {
     font-size: 2rem;
   }
 }
+
+.about-health-section {
+  background: white; 
+  padding: 60px 20px;
+}
+
+.about-health-section .about-text {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 850px;
+  margin: 0 auto;
+
+  /* animation */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1.2s ease-out forwards;
+  animation-delay: 5s; /* delay start */
+}
+
+.about-health-section .highlight {
+  color: #28c6b9; 
+  font-weight: 600;
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-health-section .about-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-health-section .about-text {
+    font-size: 1rem;
+  }
+}
