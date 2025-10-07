@@ -1596,3 +1596,179 @@ nav ul li a:hover::after {
     text-align: center;
   }
 }
+
+/* Featured Health Topics Section */
+.health-topics-section {
+  padding: 80px 20px;
+  background-color: #ffffff;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.health-topics-section .section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color:var(--text-dark);
+  margin-bottom: 60px;
+}
+
+.health-topics-section .section-title .highlight {
+  color: #00b894;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Special card styling */
+.topics-grid .topic-card.special-card {
+  grid-column: span 2;
+  justify-self: center;
+  max-width: 480px; 
+}
+
+.topic-card {
+  background-color: #e0fcf6;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row; 
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 200px;
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: var(--primary-hover);
+}
+
+.card-image {
+  flex-shrink: 0;
+  width: 180px; 
+  height: 100%;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-content {
+  flex: 1; 
+  padding: 20px 25px; 
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 5px;
+}
+
+.card-content p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  flex-grow: 1; 
+}
+
+.topic-card:hover h3,
+.topic-card:hover p {
+  color: #fff;
+}
+
+.btn-seemore {
+  display: inline-block;
+  background-color: #fff;
+  color: #00b894;
+  border: 1px solid #00b894;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  align-self: flex-start;
+}
+
+.btn-seemore:hover {
+  background-color: #00b894;
+  color: #fff;
+}
+
+/* Tablet View: Copy desktop styles */
+@media (min-width: 768px) and (max-width: 991px) {
+  .health-topics-section {
+    padding: 60px 20px;
+  }
+  .topics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .topic-card {
+    height: 180px; 
+  }
+  .card-image {
+    width: 160px; 
+  }
+  .card-content {
+    padding: 15px 20px;
+  }
+  .card-content h3 {
+    font-size: 1rem;
+  }
+  .card-content p {
+    font-size: 0.9rem;
+  }
+  .btn-seemore {
+    padding: 7px 16px;
+    font-size: 0.85rem;
+  }
+  .section-title{
+    font-size: 1rem;
+  }
+}
+
+/* Mobile View (Stacking cards) */
+@media (max-width: 767px) {
+  .topics-grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+  }
+  .topic-card {
+    flex-direction: column;
+    height: auto;
+  }
+  .card-image {
+    width: 100%;
+    height: 160px;
+  }
+  .card-content {
+    padding: 20px;
+    text-align: center;
+  }
+  .btn-seemore {
+    align-self: center;
+  }
+  .topics-grid .topic-card.special-card {
+    grid-column: unset;
+    justify-self: unset;
+    max-width: unset;
+  }
+  .health-topics-section .section-title{
+    font-size: 2rem;
+  }
+}
