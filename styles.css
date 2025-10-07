@@ -1511,3 +1511,88 @@ nav ul li a:hover::after {
     font-size: 1rem;
   }
 }
+
+/* KnowledgeHub Section */
+.knowledgehub-section {
+  /* Use a linear-gradient with rgba for the overlay */
+  background: linear-gradient(rgba(255, 255, 255, 0.775), rgba(255, 255, 255, 0.758)), url('images/knowledgeHub/bg.jpg') no-repeat center center/cover;
+  padding: 80px 20px;
+  text-align: center;
+  color: var(--text-dark); 
+}
+
+/* KnowledgeHub Section Title Animation */
+.knowledgehub-section .section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.2s; /* start first */
+}
+
+.knowledgehub-section .section-title span {
+  color: #00b894;
+}
+
+/* Paragraph Animation */
+.knowledgehub-section .text-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-dark);
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.6s; /* stagger after title */
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet View */
+@media (max-width: 991px) {
+  .knowledgehub-section {
+    padding: 60px 15px;
+  }
+  
+  .knowledgehub-section .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .knowledgehub-section .text-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 576px) {
+  .knowledgehub-section {
+    padding: 40px 10px;
+  }
+  
+  .knowledgehub-section .section-title {
+    font-size: 2rem;
+  }
+  
+  .knowledgehub-section .text-content p {
+    font-size: 1rem;
+    color: var(--text-dark);
+    text-align: center;
+  }
+}
