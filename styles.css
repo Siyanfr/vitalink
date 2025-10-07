@@ -1187,3 +1187,136 @@ nav ul li a:hover::after {
     margin-bottom: 15px; 
   }
 }
+
+/* Health Services Section */
+.health-services {
+  padding: 60px 20px;
+  background-image: url('images/services/1.png');
+  text-align: center;
+}
+
+/* Grid Layout */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Health Service Card */
+.healthservice {
+  background: #e0fcf6;
+  border-radius: 12px;
+  padding: 25px 20px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.healthservice:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+  background-color: var(--primary-hover);
+}
+
+.healthservice:hover h3,
+.healthservice:hover .desc, 
+.healthservice:hover .price,
+.healthservice:hover .price.free{
+  color:white;
+}
+
+.healthservice img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.healthservice h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.healthservice .price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.healthservice .price.free {
+  color: var(--text-dark);
+}
+
+.healthservice .desc {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.btn-service {
+  display: inline-block;
+  background-color: #fff;
+  color: #00b894;
+  border: 1px solid #00b894;
+  padding: 8px 18px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  align-self: flex-start;
+}
+
+.btn-service:hover {
+  background-color: var(--primary-hover);
+  color: #fff;
+}
+
+/* Badge for most popular */
+.healthservice.popular .badge {
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  background: #ff6b6b;
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* --- Responsive Fix for Tablet (2 Columns) --- */
+@media (max-width: 991px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  .healthservice {
+    padding: 20px;
+  }
+  .healthservice h3 {
+    font-size: 1.1rem;
+  }
+  .healthservice p {
+    font-size: 0.9rem;
+  }
+}
+
+/* --- Responsive Fix for Mobile (1 Column) --- */
+@media (max-width: 576px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .section-title{
+    font-size: 2rem;
+  }
+}
