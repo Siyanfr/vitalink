@@ -1320,3 +1320,146 @@ nav ul li a:hover::after {
     font-size: 2rem;
   }
 }
+
+/* --- For Patients Section --- */
+.for-patients-section {
+  padding: 80px 20px;
+  background-color: white; 
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.for-patients-section .section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 10px; 
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 3s; 
+}
+
+.for-patients-section .section-title .highlight {
+  color: var(--primary-teal, #00b894); 
+}
+
+.for-patients-section .section-subheading {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 50px auto; 
+  line-height: 1.6;
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .for-patients-section {
+    padding: 60px 15px;
+  }
+  .for-patients-section .section-title {
+    font-size: 2rem;
+  }
+  .for-patients-section .section-subheading {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* Providers Section */
+.providers-section {
+  padding: 80px 20px;
+  background-image: url('images/services/8.png');
+  text-align: center;
+}
+
+.providers-section .section-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.providers-section .section-title span {
+  color: #00b894; 
+}
+
+.providers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.provider-card {
+  background: #e0fcf6;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.provider-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+  background-color: var(--primary-hover); 
+}
+
+.provider-card:hover h3,
+.provider-card:hover p {
+  color:white; 
+}
+
+.provider-card .icon {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: #00b894;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.provider-card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.provider-card p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .providers-grid {
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+
+@media (max-width: 576px) {
+  .providers-grid {
+    grid-template-columns: 1fr; 
+  }
+  .providers-section .section-title{
+    font-size: 2rem;
+  }
+}
