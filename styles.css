@@ -1897,3 +1897,116 @@ nav ul li a:hover::after {
   animation: fadeUp 1s ease-out forwards;
   animation-delay: 0.6s;
 }
+
+.contact-content-wrapper {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  margin-top: 40px;
+  border-radius: 15px; 
+  overflow: hidden; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); 
+}
+
+.contact-info-box {
+  min-width: 350px;
+  background-color: var(--primary-hover);
+  color:var(--text-dark);
+  padding: 40px;
+  border-radius: 15px 0 0 15px; 
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Decorative circles */
+.contact-info-box::before,
+.contact-info-box::after {
+  content: '';
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.1); 
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.contact-info-box::before {
+  width: 100px;
+  height: 100px;
+  bottom: -30px;
+  right: -30px;
+}
+
+.contact-info-box::after {
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 50px;
+}
+
+.contact-info-box h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.contact-info-box p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contact-info-box ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+  z-index: 1; 
+}
+
+.contact-info-box ul li {
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.contact-info-box ul li i {
+  margin-right: 15px;
+  font-size: 1.3rem;
+  width: 25px; 
+}
+
+.social-icons {
+  margin-top: 300px;
+  z-index: 1;
+  display: flex;
+}
+
+.social-icons a {
+  color: var(--text-dark);
+  font-size: 1.5rem;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+  
+  /* Circle background */
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.1); 
+}
+
+.contact-hero .contact-info-box {
+  opacity: 0;
+  animation: fadeUp 1s ease-out forwards;
+  animation-delay: 1s;
+}
