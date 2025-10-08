@@ -86,6 +86,56 @@
   </div>
 </div>
 
+<div class="contact-form-box">
+  <form>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" placeholder="Enter your first name" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" placeholder="Enter your last name" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Select Subject</label>
+      <div class="radio-group">
+        <label class="radio-label">
+          <input type="radio" name="subject" value="general" required> General Inquiry
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="subject" value="telehealth" required> Telehealth Consultation
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="subject" value="mentalhealth" required> Mental Health Support
+        </label>
+        <label class="radio-label">
+          <input type="radio" name="subject" value="wellness" required> Wellness Resources
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" rows="4" placeholder="Enter your message / health concern" required></textarea>
+    </div>
+
+    <button type="submit" class="btn-send-message">Send Message</button>
+  </form>
+</div>
+
 <!-- Bootstrap JS Bundle (with Popper) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <!-- Script link of js-->
