@@ -2137,3 +2137,118 @@ nav ul li a:hover::after {
   animation: fadeUp 1s ease-out forwards;
   animation-delay: 1.4s;
 }
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 991px) {
+  .contact-title {
+    font-size: 2.8rem;
+  }
+  .contact-intro-text {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+  .contact-content-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .contact-info-box,
+  .contact-form-box {
+    width: 90%;
+    min-width: unset;
+    border-radius: 15px;
+  }
+  .contact-info-box {
+    margin-bottom: 20px;
+    /* New styles for tablet view */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .contact-info-box h2,
+  .contact-info-box p {
+    text-align: left;
+    width: 100%; 
+  }
+
+  .contact-info-box ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+  }
+
+  .social-icons {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+    margin-top: 15px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  .radio-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .btn-send-message {
+    width: auto;
+    align-self: flex-end;
+  }
+}
+  
+@media (max-width: 576px) {
+  .contact-info-box {
+    padding: 15px;
+    min-height: 100px;  
+  }
+
+  .contact-info-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+
+  .contact-info-box p {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+  }
+
+  .contact-info-box ul li {
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+
+  .contact-form-box { 
+    width: 100%;
+    padding: 30px; 
+  }
+
+  .social-icons {
+    margin-top: 10px; 
+  }
+
+  .social-icons a {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
+
+  .form-group label,
+  .radio-label {
+    font-size: 0.85rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+  }
+
+  .btn-send-message {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+}
