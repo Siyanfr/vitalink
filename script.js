@@ -114,5 +114,36 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCount();
   });
 
+  // =============================
+  // Animate sections on scroll
+  // =============================
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.animate(
+            [
+              { opacity: 0, transform: "translateY(50px)" },
+              { opacity: 1, transform: "translateY(0)" }
+            ],
+            {
+              duration: 1000,
+              easing: "ease-out",
+              fill: "forwards"
+            }
+          );
+          observer.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  // Observe sections
+  document.querySelectorAll(
+    ".our-mission, .featured-services, .explore-vitalink, .about-section, footer"
+  ).forEach(section => observer.observe(section));
+
+
   
 });
