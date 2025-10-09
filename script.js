@@ -29,19 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
-// Animate hero background
-  const heroSection = document.querySelector(".hero");
-  if (heroSection) {
-    heroSection.animate(
-      [{ opacity: 0 }, { opacity: 1 }],
-      {
-        duration: 2000,
-        easing: "ease-out",
-        fill: "forwards"
-      }
-    );
-  }
-
   // Animate hero heading
   const heroHeading = document.querySelector(".hero-text h1");
   if (heroHeading) {
@@ -74,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     );
   }
-  
+
   // Animate buttons
   const buttons = document.querySelectorAll(".hero-buttons button");
   buttons.forEach((btn, i) => {
@@ -144,6 +131,162 @@ document.addEventListener("DOMContentLoaded", () => {
     ".our-mission, .featured-services, .explore-vitalink, .about-section, footer"
   ).forEach(section => observer.observe(section));
 
+  // Animate service/explore cards individually
+  const cardObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.animate(
+            [
+              { opacity: 0, transform: "scale(0.9)" },
+              { opacity: 1, transform: "scale(1)" }
+            ],
+            {
+              duration: 800,
+              easing: "ease-out",
+              fill: "forwards"
+            }
+          );
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
 
-  
+  document
+    .querySelectorAll(".service-card, .explore-card")
+    .forEach(card => cardObserver.observe(card));
 });
+
+
+// =============================
+  // HEALTH SERVICES CARDS
+  // =============================
+  const serviceCards = document.querySelectorAll(".healthservice");
+  const serviceObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          serviceCards.forEach((card, i) => {
+            setTimeout(() => {
+              card.animate(
+                [
+                  { opacity: 0, transform: "scale(0.9)" },
+                  { opacity: 1, transform: "scale(1)" }
+                ],
+                {
+                  duration: 800,
+                  easing: "ease-out",
+                  fill: "forwards"
+                }
+              );
+            }, i * 150); 
+          });
+          serviceObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  if (serviceCards.length) serviceObserver.observe(serviceCards[0]);
+
+  // =============================
+  // PROVIDERS CARDS
+  // =============================
+  const providerCards = document.querySelectorAll(".provider-card");
+  const providerObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          providerCards.forEach((card, i) => {
+            setTimeout(() => {
+              card.animate(
+                [
+                  { opacity: 0, transform: "translateY(30px)" },
+                  { opacity: 1, transform: "translateY(0)" }
+                ],
+                {
+                  duration: 700,
+                  easing: "ease-out",
+                  fill: "forwards"
+                }
+              );
+            }, i * 200);
+          });
+          providerObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+  if (providerCards.length) providerObserver.observe(providerCards[0]);
+
+  // =============================
+// HEALTH TOPICS CARDS (.topic-card)
+// =============================
+const topicCards = document.querySelectorAll(".topic-card");
+if (topicCards.length) {
+    const topicCardObserver = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    topicCards.forEach((card, i) => {
+                        // Use a short timeout to stagger the animation for each card
+                        setTimeout(() => {
+                            card.animate(
+                                [
+                                    // Pop-in keyframes (fade in and slight scale up)
+                                    { opacity: 0, transform: "scale(0.95)" },
+                                    { opacity: 1, transform: "scale(1)" }
+                                ],
+                                {
+                                    duration: 700,
+                                    easing: "ease-out",
+                                    fill: "forwards"
+                                }
+                            );
+                        }, i * 150); 
+                    });
+                    
+                    topicCardObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+    topicCardObserver.observe(topicCards[0]);
+}
+
+// =============================
+// OUR VISION SECTION ANIMATION
+// =============================
+const visionSection = document.querySelector(".our-vision");
+if (visionSection) {
+    const visionObserver = new IntersectionObserver(
+        entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const content = visionSection.querySelector(".vision-content");
+                    if (content) {
+                         content.animate(
+                            [
+                                { opacity: 0, transform: "translateY(40px)" },
+                                { opacity: 1, transform: "translateY(0)" }
+                            ],
+                            {
+                                duration: 800,
+                                easing: "ease-out",
+                                fill: "forwards"
+                            }
+                        );
+                    }
+                    visionObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.2 }
+    );
+    visionObserver.observe(visionSection);
+}
+  
