@@ -1,34 +1,18 @@
-/* ==========================
-   Navigation
-========================== */
-// Smooth scrolling for nav links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    // Scroll to the target section smoothly
-  });
+// script.js
+document.addEventListener("DOMContentLoaded", () => {
+  // Animate header
+  const header = document.querySelector("nav.navbar");
+  if (header) {
+    header.animate(
+      [
+        { opacity: 0, transform: "translateY(-50px)" },
+        { opacity: 1, transform: "translateY(0)" }
+      ],
+      {
+        duration: 800,
+        easing: "ease-out",
+        fill: "forwards"
+      }
+    );
+  }
 });
-
-// Change header style on scroll
-window.addEventListener('scroll', function () {
-  // Add background / shadow when scrolling past a point
-});
-
-/* ==========================
-   Stats Animation
-========================== */
-// Animate numbers when stats section is in view
-function animateStats() {
-  // Use IntersectionObserver or scroll event
-  // Increment numbers until they reach target values
-}
-
-// Initialize animations when DOM loads
-document.addEventListener('DOMContentLoaded', animateStats);
-
-/* ==========================
-   Other Interactions
-========================== */
-// Toggle mobile menu
-// Form validation (if needed)
-// Sliders / carousels (if any)
